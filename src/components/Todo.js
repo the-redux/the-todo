@@ -1,17 +1,9 @@
 import React from 'react';
 
 const Todo = ({ onClick, completed, text }) => (
-  <li
-    onClick={onClick}
-  >
-    {
-      (completed) ? (
-        <del>{ text }</del>
-      ) : (
-        text
-      )
-    }
-  </li>
+  <div className={completed ? 'alert alert-success' : 'alert alert-primary'} role="alert" onClick={onClick}>
+    {text}
+  </div>
 );
 
 export default Todo;

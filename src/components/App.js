@@ -4,10 +4,15 @@ import VisibleTodoList from '../containers/VisibleTodoList';
 import AddTodo from '../containers/AddTodo';
 
 const App = () => (
-  <div>
-    <AddTodo />
-    <VisibleTodoList />
-    <Footer/>
+  <div className="container">
+    <div className="row justify-content-center">
+      <div className="col-6">
+        <h4>Todo App</h4>
+        <AddTodo />
+        <VisibleTodoList />
+        <Footer/>
+      </div>
+    </div>
   </div>
 )
 

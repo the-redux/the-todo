@@ -16,6 +16,8 @@ const getVisibleTodos = createSelector(
         return todos.filter(t => !t.completed);
       case VisibilityFilter.SHOW_COMPLETED:
         return todos.filter(t => t.completed);
+      default:
+        return todos;
     }
   }
 );
