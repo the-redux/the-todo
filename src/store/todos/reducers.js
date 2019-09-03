@@ -10,13 +10,13 @@ function todos(state = initialState, action) {
         {
           id: action.id,
           text: action.text,
-          complete: false,
+          completed: false,
         }
       ];
     case TOGGLE_TODO:
       return state.map(todo =>
         todo.id === action.id
-        ? { ...todo, complete: !todo.complete }
+        ? { ...todo, completed: !todo.completed }
         : todo
       );
     default:
